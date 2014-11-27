@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architecture>
+  <subarchitecture idsubarchitecture="subArch0">
+    <component id="comp1" name="br.teste.ClientImpl">
+      <provideinterface idinterface="id1" name="r" signature="java.lang.Runnable" />
+      <requiredinterface idinterface="id2" name="s" signature="br.teste.Service" />
+    </component>
+    <component id="comp2" name="br.teste.ServerImpl">
+      <provideinterface idinterface="id3" name="s" signature="br.teste.Service" />
+    </component>
+    <binding componentclient="comp1" interfaceclient="id2" componentserver="comp2" interfaceserver="id3" />
+  </subarchitecture>
+</architecture>

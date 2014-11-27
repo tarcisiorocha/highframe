@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architecture>
+  <subarchitecture idsubarchitecture="subArch0">
+    <component id="comp1" name="br.teste.ClientImpl">
+      <provideinterface idinterface="id0" name="r" signature="java.lang.Runnable" />
+      <requiredinterface idinterface="id1" name="s" signature="br.teste.Service" />
+    </component>
+    <exportinterface idinterface="id1" />
+  </subarchitecture>
+  <subarchitecture idsubarchitecture="subArch1">
+    <component id="comp2" name="br.teste.ServerImpl">
+      <provideinterface idinterface="id2" name="s" signature="br.teste.Service" />
+    </component>
+    <exportinterface idinterface="id2" />
+  </subarchitecture>
+</architecture>

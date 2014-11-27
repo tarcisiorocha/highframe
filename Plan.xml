@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Necessário ver no XML o local dos .java e .class anotados \repositoriogenerico -->
+<plan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="deploymentplan.xsd">
+	<deployment idsubarchitecture="subarc1" componentmodel="Fractal" host="localhost" ></deployment>
+<!-- 	<deployment idsubarchitecture="subarc2" componentmodel="opencom" host="192.168.1.6" port="3078"></deployment> -->
+	<remotebinding idexportedclientinterface="subarc1.clientImpl.c.ir1" idexportedserverinterface="subarc2.serverImpl.s.ip1" bindingtype="rmi"></remotebinding>
+</plan>

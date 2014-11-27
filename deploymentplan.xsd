@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Este é o nosso nó principal -->
+<xs:element name="plan"> 
+    <xs:complexType>
+        <!-- Determina que os elementos a seguir devem aparecer nesta mesma ordem -->
+        <xs:sequence>
+			<xs:element name="deployment" maxOccurs="unbounded">
+			    <!-- Define um tipo formado por outros elementos --> 
+			    <xs:complexType>
+			        <!-- Determina que os elementos a seguir devem aparecer nesta mesma ordem -->
+			        <xs:attribute name="idsubarchitecture" type="xs:string"/>	
+			        <xs:attribute name="componentmodel" type="xs:string"/>
+			        <xs:attribute name="host" type="xs:string"/>
+			        <xs:attribute name="port" type="xs:int" use="optional"/>			        
+			    </xs:complexType>			     
+			</xs:element>	
+			<xs:element name="remotebinding" maxOccurs="unbounded">
+			    <!-- Define um tipo formado por outros elementos --> 
+			    <xs:complexType>
+			        <!-- Determina que os elementos a seguir devem aparecer nesta mesma ordem -->
+			        <xs:attribute name="idexportedclientinterface" type="xs:string"/>
+			        <xs:attribute name="idexportedserverinterface" type="xs:string"/>		
+			        <xs:attribute name="bindingtype" type="xs:string"/>			        
+			    </xs:complexType>			     
+			</xs:element>	    
+		</xs:sequence>		
+	  </xs:complexType>			    
+	</xs:element>   
+</xs:schema>

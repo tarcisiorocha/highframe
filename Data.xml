@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<architecture xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="adl.xsd">
+<!-- ** Subarquiteturas Início -->
+<subarchitecture idsubarchitecture="subarc1" name="Subarc1">
+<!-- **** Componentes  -->
+  <component id="clientImpl" name="br.teste.ClientImpl" >
+    <providedinterface idinterface="c.ip1" name="r" signature="java.lang.Runnable" ></providedinterface>
+    <requiredinterface idinterface="c.ir1" name="s" signature="br.teste.Service"></requiredinterface>
+<!--     <requiredinterface idinterface="c.ir2" name="s2" signature="br.teste.Service"></requiredinterface> -->
+<!--     <requiredinterface idinterface="c.ir3" name="s3" signature="br.teste.Service"></requiredinterface> -->
+  </component>
+  
+  <component id="serverImpl" name="br.teste.ServerImpl" >
+    <providedinterface idinterface="s.ip1" name="r" signature="br.teste.Service" ></providedinterface>    
+  </component>
+<!-- **** Bindings  -->
+  <binding clientcomponent="clientImpl" clientinterface="c.ir1" servercomponent="serverImpl" serverinterface="s.ip1"></binding>
+<!-- **** Interfaces Exportadas  -->
+  <exportedinterface idinterface="s.ip1" ></exportedinterface>  
+</subarchitecture>
+<!-- Subarquiteturas Fim -->
+</architecture>

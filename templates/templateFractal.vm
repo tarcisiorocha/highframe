@@ -1,0 +1,32 @@
+${packageName};
+
+#foreach ($item in $imports)  
+$item
+#end
+import org.objectweb.fractal.api.control.BindingController;
+import org.objectweb.fractal.api.NoSuchInterfaceException;
+import org.objectweb.fractal.api.control.IllegalLifeCycleException;
+import org.objectweb.fractal.api.control.IllegalBindingException;
+
+public class $nomeclasse implements BindingController $implements {
+
+#foreach ($item in $conteudo)  
+$item
+#end	
+	
+	public String[] listFc() {
+		return new String[] { ${listFc} };
+	}
+
+	public Object lookupFc(String clientItfName) throws NoSuchInterfaceException {
+		${lookupFc}
+	}
+
+	public void bindFc(String clientItfName, Object serverItf) throws NoSuchInterfaceException, IllegalBindingException, IllegalLifeCycleException {
+		${bindFc}
+	}
+
+	public void unbindFc(String clientItfName) throws NoSuchInterfaceException, IllegalBindingException, IllegalLifeCycleException {
+		${unbindFc}
+	}
+}

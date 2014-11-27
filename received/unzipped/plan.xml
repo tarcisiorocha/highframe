@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan>
+  <deployment idsubarchitecture="frontend" componentmodel="OpenCOM" host="169.254.138.214" />
+  <deployment idsubarchitecture="backend" componentmodel="Fractal" host="169.254.197.31" />
+  <remotebindind idexportedclientinterface="id3" idexportedserverinterface="id5" bindingtype="WebServiceSOAP" />
+</plan>

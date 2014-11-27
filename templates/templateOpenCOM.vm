@@ -1,0 +1,47 @@
+${packageName};
+
+#foreach ($item in $imports)  
+$item
+#end
+import OpenCOM.IConnections;
+import OpenCOM.ILifeCycle;
+import OpenCOM.IMetaInterface;
+import OpenCOM.IUnknown;
+import OpenCOM.OCM_SingleReceptacle;
+import OpenCOM.OpenCOMComponent;
+
+public class $nomeclasse extends OpenCOMComponent implements IUnknown, ILifeCycle, IMetaInterface, IConnections $implements {
+
+#foreach ($campo in $campos)  
+	$campo
+#end
+
+	public $nomeclasse (IUnknown mpIOCM) {
+		super(mpIOCM);
+	#foreach ($campo in $construtor)  
+	$campo
+	#end
+}
+
+#foreach ($metodo in $metodos)  
+$metodo
+#end
+
+	@Override
+	public boolean startup(Object data) {
+		return true;
+	} 
+
+	@Override
+	public boolean shutdown() {
+		return true;
+	}
+	
+	public boolean connect(IUnknown pSinkIntf, String riid, long provConnID) {
+		${connect}
+	}
+
+	public boolean disconnect(String riid, long connID) {
+		${disconnect}
+	}
+}

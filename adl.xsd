@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Este é o nosso nó principal -->
+<xs:element name="architecture"> 
+    <xs:complexType>
+        <!-- Determina que os elementos a seguir devem aparecer nesta mesma ordem -->
+        <xs:sequence>
+			<xs:element name="subarchitecture" maxOccurs="unbounded">
+			    <!-- Define um tipo formado por outros elementos --> 
+			    <xs:complexType>
+			        <!-- Determina que os elementos a seguir devem aparecer nesta mesma ordem -->
+			        <xs:sequence>
+			            <!-- Define que o tipo "componente" pode ocorrer N vezes (unbounded = sem limite)-->
+			            <xs:element name="component" maxOccurs="unbounded">
+			                <!-- Define que "componente" é formado por outros elementos -->
+			                <xs:complexType>
+			                    <!-- Os itens de "componente" devem aparecer nessa ordem -->
+			                    <xs:sequence>
+			                        <!-- Define que o elemento "interfacesprovidas" não é obrigatório mas pode aparecer N vezes -->
+			                        <xs:element name="providedinterface"  minOccurs="0" maxOccurs="unbounded">
+			                          <xs:complexType mixed="true">  
+			                             <xs:attribute name="idinterface" type="xs:string" use="required"/>  
+                             			 <xs:attribute name="name" type="xs:string" use="required"/>  
+                             			 <xs:attribute name="signature" type="xs:string" use="required"/>  
+                              		  </xs:complexType>  
+			                        </xs:element>			                        
+			                        <!-- Define que o elemento "interfacesrequeridas" não é obrigatório mas pode aparecer N vezes -->
+			                        <xs:element name="requiredinterface" minOccurs="0" maxOccurs="unbounded">
+			                          <xs:complexType mixed="true">  
+			                             <xs:attribute name="idinterface" type="xs:string" use="required"/>  
+                             			 <xs:attribute name="name" type="xs:string" use="required"/>  
+                             			 <xs:attribute name="signature" type="xs:string" use="required"/>  
+                            		  </xs:complexType> 
+			                        </xs:element>			                        
+			                    </xs:sequence>
+			                    <xs:attribute name="id" type="xs:string"/>
+			                    <xs:attribute name="name" type="xs:string"/>
+			                </xs:complexType>
+			            </xs:element>
+			            <xs:element name="binding" minOccurs="0" maxOccurs="unbounded">
+			               <xs:complexType mixed="true">  
+                              <xs:attribute name="clientcomponent" type="xs:string" use="required"/>  
+                              <xs:attribute name="clientinterface" type="xs:string" use="required"/>  
+                              <xs:attribute name="servercomponent" type="xs:string" use="required"/>
+                              <xs:attribute name="serverinterface" type="xs:string" use="required"/>
+                           </xs:complexType> 
+			            </xs:element>
+			            <xs:element name="exportedinterface" maxOccurs="unbounded">
+					       <xs:complexType mixed="true">  
+				               <xs:attribute name="idinterface" type="xs:string" use="required"/>				            
+				           </xs:complexType>  
+				   		</xs:element>	        
+			        </xs:sequence>
+			        <xs:attribute name="idsubarchitecture" type="xs:string"/>
+			        <xs:attribute name="name" type="xs:string"/>		
+			        		        
+			    </xs:complexType>
+			     
+			</xs:element>
+	
+	   
+		</xs:sequence>
+	  </xs:complexType>
+			    
+	</xs:element>
+   
+</xs:schema>

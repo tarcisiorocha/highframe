@@ -1,0 +1,46 @@
+<architecture xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="adl.xsd">  <subarchitecture idsubarchitecture="frontend">
+    <component id="comp1" name="comanche.fraclet.Receiver">
+      <providedinterface idinterface="id1" name="r" signature="highframe.core.Runner" />
+      <requiredinterface idinterface="id2" name="s" signature="comanche.fraclet.IScheduler" />
+      <requiredinterface idinterface="id3" name="ia" signature="comanche.fraclet.IAnalyzer" />
+    </component>
+    <component id="comp2" name="comanche.fraclet.Scheduler">
+      <providedinterface idinterface="id4" name="s" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp3" name="comanche.fraclet.Scheduler2">
+      <providedinterface idinterface="" name="s2" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp4" name="comanche.fraclet.Scheduler3">
+      <providedinterface idinterface="" name="s3" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp5" name="comanche.fraclet.Scheduler4">
+      <providedinterface idinterface="" name="s4" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp6" name="comanche.fraclet.Scheduler5">
+      <providedinterface idinterface="" name="s5" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp7" name="comanche.fraclet.Scheduler6">
+      <providedinterface idinterface="" name="s6" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp8" name="comanche.fraclet.Scheduler7">
+      <providedinterface idinterface="" name="s7" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp9" name="comanche.fraclet.Scheduler8">
+      <providedinterface idinterface="" name="s8" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp10" name="comanche.fraclet.Scheduler9">
+      <providedinterface idinterface="" name="s9" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp11" name="comanche.fraclet.Scheduler10">
+      <providedinterface idinterface="" name="s10" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp12" name="comanche.fraclet.Scheduler11">
+      <providedinterface idinterface="" name="s11" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <component id="comp13" name="comanche.fraclet.Scheduler12">
+      <providedinterface idinterface="" name="s12" signature="comanche.fraclet.IScheduler" />
+    </component>
+    <binding clientcomponent="comp1" clientinterface="id2" servercomponent="comp2" serverinterface="id4" />
+    <exportedinterface idinterface="id3" />
+  </subarchitecture>
+</architecture>
